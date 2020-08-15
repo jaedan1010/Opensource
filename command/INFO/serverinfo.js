@@ -1,9 +1,6 @@
 const db = require("quick.db");
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-  let overall = db.fetch(`messages_${message.guild.id}`);
-  let today = db.fetch(`message_today_${message.guild.id}`);
-  try {
     let sEmbed = new Discord.MessageEmbed()
       .setColor("BLUE")
       .setTitle("서버정보")
@@ -16,8 +13,6 @@ module.exports.run = async (bot, message, args) => {
       .addField("**서버 주인:**", `${message.guild.owner}`, true)
       .addField("**멤버수:**", `${message.guild.memberCount}`, true)
       .addField("**역할수:**", `${message.guild.roles.cache.size}`, true)
-      .addField("Total Messages sent", overall)
-      .addField("Messages Sent Today", today)
       .setFooter(`꿀꿀봇 |`, bot.user.displayAvatarURL());
     message.channel.send({ embed: sEmbed });
   } catch (e) {
@@ -27,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
 exports.config = {
   name: "서버정보",
-  aliases: ["vld"],
+  aliases: ["서버정보", "tjqjwjdqh"],
   category: ["INFO"],
   des: ["서버정보를 봅니다"],
   use: ["ㄲ 서버정보"]
