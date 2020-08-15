@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const reload = require("self-reload-json")
 const fs = require('fs')
 const config = require("./config.json")
 
