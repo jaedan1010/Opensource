@@ -17,8 +17,6 @@
     "dotenv": "^8.2.0",
     "fs": "^0.0.2",
     "node-opus": "^0.3.3",
-    "quick-db": "^1.0.5",
-    "quick.db": "^7.1.1",
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "ms": "^2.1.2",
